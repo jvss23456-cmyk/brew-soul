@@ -1,0 +1,6 @@
+{
+  "name": "Brew & Soul",
+  "description": "Experiência digital de luxo editorial para cafeteria de grãos especiais, alta gastronomia e clube de café.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

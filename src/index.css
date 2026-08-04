@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dark-roast: #1A120B;
+    --golden-crema: #E5BA73;
+    --steamed-milk: #F5EBE0;
+    --artisan-moss: #4E6C50;
+  }
+
+  body {
+    background-color: #1A120B;
+    color: #F5EBE0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom Color Utility Classes */
+.bg-dark-roast { background-color: #1A120B; }
+.bg-dark-roast-deep { background-color: #120C07; }
+.bg-golden-crema { background-color: #E5BA73; }
+.bg-steamed-milk { background-color: #F5EBE0; }
+.bg-artisan-moss { background-color: #4E6C50; }
+
+.text-dark-roast { color: #1A120B; }
+.text-golden-crema { color: #E5BA73; }
+.text-steamed-milk { color: #F5EBE0; }
+.text-artisan-moss { color: #4E6C50; }
+
+.border-golden-crema { border-color: #E5BA73; }
+.border-steamed-milk { border-color: #F5EBE0; }
+.border-artisan-moss { border-color: #4E6C50; }
+
+/* Custom Glassmorphism */
+.glass-header {
+  background: rgba(26, 18, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(229, 186, 115, 0.12);
+}
+
+.glass-card {
+  background: rgba(35, 25, 17, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 186, 115, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(229, 186, 115, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(229, 186, 115, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1A120B;
+}
+::-webkit-scrollbar-thumb {
+  background: #4E6C50;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5BA73;
+}
+
+/* Texture Overlay */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Gold Gradient Glow */
+.gold-glow {
+  text-shadow: 0 0 20px rgba(229, 186, 115, 0.35);
+}
+
+/* Image Shimmer Effect */
+.image-zoom-container {
+  overflow: hidden;
+}
+.image-zoom-container img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.image-zoom-container:hover img {
+  transform: scale(1.06);
+}
+
